@@ -1,0 +1,128 @@
+<html>
+<header>
+    <META HTTP-EQUIV="Pragma" NAME="" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" NAME="" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" NAME="" CONTENT="0">
+	<script type="text/javascript">
+	
+	try{
+		 document.domain="lianlife.com";
+	}catch(e)
+	{
+	}
+	    
+	    
+		function _GetCookie(name) {
+			var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+			if (arr = document.cookie.match(reg))
+
+				return unescape(arr[2]);
+			else
+				return null;
+		};
+		
+		function checkWXUSTK()
+		{
+			var _WXUSTK=_GetCookie('_WXUSTK');
+			if(_WXUSTK==null)
+			{
+				return false ;
+			}else
+			{
+				true ;
+			}
+		}
+		
+		function checkUSTK()
+		{
+			var _USTK=_GetCookie('_USTK');
+			if(_USTK==null)
+			{
+				return false ;
+			}
+			else 
+			{
+				var tokens=_USTK.split("|");
+				var sd=new Date(parseInt(tokens[0]));
+				var sd2=new Date();
+				if(sd.getTime()<sd2.getTime())
+				{
+					return false ;
+				}
+				else
+				{
+					return true ;
+				}
+			}
+		}
+		
+		
+        function checkSSST()
+        {
+        	var _SSST=_GetCookie('_SSST');
+        	if(_SSST==null)
+        	{
+        		return false ;
+        	}
+        	
+        	var sd=new Date(parseInt(_SSST));
+        	var sd2=new Date();
+			if(sd.getTime()<sd2.getTime())
+			{
+				return false ;
+			}
+			else
+			{
+				return true ;
+			}
+        }
+        
+         
+        	
+		
+		
+		try{
+			
+			if(checkWXUSTK())
+			{
+				window.location.href = "success.53ca99c96b5cfb1114b65be64e0edacb.cacheable.hmgz";
+			}
+			else if(checkSSST())
+			 {
+				window.location.href = "success.53ca99c96b5cfb1114b65be64e0edacb.cacheable.hmgz";
+			 }else if(checkUSTK())
+			 {
+				 window.location.href = "success.53ca99c96b5cfb1114b65be64e0edacb.cacheable.hmgz";
+			 }else {
+				 
+			 
+				 window._LoginURL='http://login2.lianlife.com/LOGIN2';
+				 
+				 window._LOGIN_HISTORY_BACK=window.location.href;
+				 sessionStorage.setItem('_LOGIN_HISTORY_BACK',window.location.href);
+				 localStorage.setItem("_LOGIN_HISTORY_BACK",window.location.href);
+				
+				 var href=window.location.href;
+				 href=href.substr(0,href.lastIndexOf('/'));
+				 href=href.substr(0,href.lastIndexOf('/'));
+				 href=href+"/Login/index.html?random="+ Math.random();
+				 window.location.href = window._LoginURL+'/SSO/MobileLoginAction?_MOBILE=Y&_MOBILE_JUMP='+encodeURI(window.location.href)+"&jump2Lian="+encodeURI(href);
+			 }
+			 
+		}catch(e){
+			
+			window.location.href = "success.53ca99c96b5cfb1114b65be64e0edacb.cacheable.hmgz";
+			
+		};
+		
+		
+		
+		
+		
+
+		
+	</script>
+</header>
+<body></body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<App ID="M" TITLE="lianlife" INTERVAL_TIME="3600000" >
+    <AndroidVersion>1</AndroidVersion>
+	<ApkFileName>NJLA</ApkFileName>
+	<LoadUrl>http://es.lianlife.com/NJLAapk/NJLA.apk</LoadUrl>
+    <IosVersion>1.0</IosVersion>
+	<IpaUrl>http://www.lianlife.com/efwios</IpaUrl>
+    <Launch>
+	    <LaunchScreen SRC="/common/welcome_bg.png" TIME="500"/>
+	</Launch>
+    <ModuleDepository >
+      <Module MODULE_ID="M" URL="http://app.lianlife.com/PROXY/WXIMG/MOBILE/CUSTOMER/M/" />
+    </ModuleDepository>
+	<commonResource>
+	    <Functions>
+	        <Function  MODULE_ID="M" FUNCTION_ID="common" />
+	        <!-- <Function  MODULE_ID="M" FUNCTION_ID="cordova" /> -->
+		    <!-- <Function  MODULE_ID="M"  FUNCTION_ID="Login" /> -->
+	        <Function  MODULE_ID="M" FUNCTION_ID="Stub" />
+	        <!-- <Function  MODULE_ID="M" FUNCTION_ID="Binding" />
+		    <Function  MODULE_ID="M"  FUNCTION_ID="Home" /> -->
+	    </Functions>
+	</commonResource>
+	
+</App>

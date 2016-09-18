@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lianlife.demo.dao.CommentDao">
+
+	<insert id="addComment" parameterType="com.lianlife.demo.model.CommentDomain">
+		INSERT INTO t_comment (F_COMMENT_ID, F_MESSAGE_ID, F_COMMENT_USER_ID, F_CONTENT, F_CREATE_DATE) VALUES (#{commentId},#{messageId},#{commentUserId},#{comment},now())
+	</insert>
+	
+	<select id="getCommentList" parameterType="java.lang.String" resultType="com.lianlife.demo.model.CommentDomain">  
+	       SELECT U.F_USER_NAME userName, 
+	       C.F_CONTENT comment
+	       FROM demo.t_comment C ,demo.t_user U where U.F_USER_ID = C.F_COMMENT_USER_ID and F_MESSAGE_ID =#{msgId} order by C.F_CREATE_DATE 
+  	</select> 
+
+</mapper>

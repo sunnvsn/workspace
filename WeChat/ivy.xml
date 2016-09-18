@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.jayasoft.fr/org/ivyrep/ivy-doc.xsl"?>
+<ivy-module version="1.1">
+	<info organisation="com.lianlife" module="ES" status="integration" revision="1.0.0" />
+	<dependencies>
+	    <!-- <dependency org="lianlife" name="activation" rev="1.1"/> -->
+	    <dependency org="lianlife" name="antlr" rev="2.7.7"/>
+	    <dependency org="lianlife" name="aopalliance" rev="1.0.0"/> 
+<!-- 	    <dependency org="lianlife" name="async-http-client" rev="1.7.5"/>
+	    <dependency org="lianlife" name="axiom-api" rev="1.2.7"/>
+	    <dependency org="lianlife" name="axiom-impl" rev="1.2.7"/>
+	    <dependency org="lianlife" name="axis2-adb" rev="1.4.1"/>
+	    <dependency org="lianlife" name="axis2-kernel" rev="1.4.1"/>
+	    
+	    <dependency org="lianlife" name="backport-util-concurrent" rev="3.1"/>
+	     -->
+	    <dependency org="lianlife" name="c3p0" rev="0.9.1"/>
+		<dependency org="lianlife" name="cglib" rev="2.2"/> 
+		<dependency org="lianlife" name="classmate" rev="0.8.0"/> 
+		<dependency org="lianlife" name="com.springsource.com.thoughtworks.xstream" rev="1.0.0"/>
+        <dependency org="lianlife" name="com.springsource.org.aspectj.weaver" rev="1.0.0"/>
+        <dependency org="lianlife" name="com.springsource.org.codehaus.jackson" rev="1.0.0"/>
+        <dependency org="lianlife" name="com.springsource.org.codehaus.jackson.mapper" rev="1.0.0"/>
+        <dependency org="lianlife" name="com.springsource.org.objectweb.asm" rev="1.0.0"/>
+        
+        <dependency org="lianlife" name="commons-discovery" rev="0.5"/>
+        <dependency org="lianlife" name="commons-logging" rev="1.1.3"/>     
+        <dependency org="lianlife" name="commons-lang" rev="1.0.0"/>     
+        <dependency org="lianlife" name="commons-beanutils" rev="1.8.0"/>
+        <dependency org="lianlife" name="commons-codec" rev="1.6"/>
+        <dependency org="lianlife" name="commons-collections" rev="3.1"/>
+        <dependency org="lianlife" name="commons-digester" rev="2.0"/>
+        <dependency org="lianlife" name="commons-fileupload" rev="1.0.0"/> 
+        <dependency org="lianlife" name="commons-io" rev="1.0.0"/>
+        <dependency org="lianlife" name="commons-pool" rev="1.0.0"/> 
+        
+        <dependency org="lianlife" name="cxf" rev="1.0.0"/> 
+        <dependency org="lianlife" name="cxf-manifest" rev="1.0.0"/> 
+        <dependency org="lianlife" name="cxf-xjc-boolean" rev="1.0.0"/> 
+        <dependency org="lianlife" name="cxf-xjc-bug" rev="1.0.0"/> 
+        <dependency org="lianlife" name="cxf-xjc-dv" rev="1.0.0"/> 
+        <dependency org="lianlife" name="cxf-xjc-ts" rev="1.0.0"/> 
+        
+        <dependency org="lianlife" name="dom4j" rev="1.6.1"/>
+        
+        <dependency org="lianlife" name="ehcache-core" rev="1.0.0"/>
+        <dependency org="lianlife" name="ezmorph" rev="1.0.0"/>    
+        
+        <!-- <dependency org="lianlife" name="fluent-hc" rev="4.2.5"/>   -->
+        
+<!--         <dependency org="lianlife" name="geronimo-jaxws" rev="1.0.0"/> 
+        <dependency org="lianlife" name="geronimo-stax-api_1.0_spec" rev="1.0.1"/> 
+        <dependency org="lianlife" name="geronimo-ws-metadata" rev="1.0.0"/>   -->
+        
+        <dependency org="lianlife" name="hibernate-commons-annotations" rev="4.0.1.Final"/>
+        <dependency org="lianlife" name="hibernate-core" rev="4.1.9.Final"/>
+        <dependency org="lianlife" name="hibernate-jpa" rev="2.0-api-1.0.1.Final"/>
+        <dependency org="lianlife" name="hibernate-validator" rev="5.0.1.Final"/>
+        <dependency org="lianlife" name="hibernate-validator-annotation-processor" rev="5.0.1.Final"/>
+        <dependency org="lianlife" name="hibernate-validator-cdi" rev="5.0.1.Final"/>
+        <dependency org="lianlife" name="hsqldb" rev="1.0.0"/>
+<!--         <dependency org="lianlife" name="httpasyncclient" rev="4.0"/>
+        <dependency org="lianlife" name="httpasyncclient-cache" rev="4.0"/>
+        <dependency org="lianlife" name="httpclient" rev="4.3.1"/>
+        <dependency org="lianlife" name="httpclient-cache" rev="4.3.1"/>
+        <dependency org="lianlife" name="httpmime" rev="4.3.1"/>
+        <dependency org="lianlife" name="httpcore" rev="4.3"/>
+        <dependency org="lianlife" name="httpcore-ab" rev="4.3"/>
+        <dependency org="lianlife" name="httpcore-nio" rev="4.3"/> -->
+        
+        <dependency org="lianlife" name="kaptcha" rev="2.3.2"/>
+        
+        <dependency org="lianlife" name="jsp-api" rev="1.0.0"/>
+        <!-- <dependency org="lianlife" name="javax.el" rev="2.2.4"/> -->
+        <dependency org="lianlife" name="jaxb-api" rev="1.0.0"/>
+        <dependency org="lianlife" name="jaxb-impl" rev="1.0.0"/>
+        <dependency org="lianlife" name="jaxb-xjc" rev="1.0.0"/>
+        <dependency org="lianlife" name="jaxrpc" rev="1.0.0"/>
+        <dependency org="lianlife" name="jboss-logging" rev="3.1.1.GA"/>
+        <dependency org="lianlife" name="jboss-transaction-api_1.1_spec" rev="1.0.0.Final"/>
+        <dependency org="lianlife" name="jcifs" rev="1.3.17"/><!--add  -->
+        <dependency org="lianlife" name="jsoup" rev="1.7.2"/>
+        <dependency org="lianlife" name="json-lib" rev="1.0.0"/>
+        <dependency org="lianlife" name="jra-alpha" rev="1.0.0"/>
+        <dependency org="lianlife" name="js" rev="1.0.0"/>
+        <dependency org="lianlife" name="jstl" rev="1.0.0"/>
+        <dependency org="lianlife" name="jsr-api" rev="1.0.0"/><!--add  -->
+        <dependency org="lianlife" name="jta" rev="1.1"/>
+        <dependency org="lianlife" name="jdom" rev="1.0.0"/>
+        <dependency org="lianlife" name="javassist" rev="3.17.1"/>
+        <dependency org="lianlife" name="jcl-over-slf4j" rev="1.6.4"/>
+        
+        <dependency org="lianlife" name="log4j" rev="1.0.0"/>
+        <dependency org="lianlife" name="lasdk" rev="1.0.0"/>
+        
+        <!-- <dependency org="lianlife" name="mail" rev="1.0.0"/> -->
+        <dependency org="lianlife" name="mybatis" rev="3.2.2"/>
+        <dependency org="lianlife" name="mybatis-spring" rev="1.2.0"/>
+        <dependency org="lianlife" name="mysql-connector-java" rev="5.1.15"/>
+        
+<!--         <dependency org="lianlife" name="neethi" rev="2.0.4"/>
+        <dependency org="lianlife" name="netty-all" rev="4.0.12.Final"/> -->
+        
+        <dependency org="lianlife" name="ojdbc" rev="1.0.0"/> 
+        <dependency org="lianlife" name="ognl" rev="2.7.3"/> 
+        <dependency org="lianlife" name="opensaml" rev="1.0.0" />
+        <dependency org="lianlife" name="openws" rev="1.0.0" />
+        <dependency org="lianlife" name="orai18n" rev="1.0.0" />
+        <dependency org="lianlife" name="oro" rev="2.0.8" />
+        
+        <dependency org="lianlife" name="saaj-api" rev="1.0.0" />
+        <dependency org="lianlife" name="saaj-impl" rev="1.0.0" />
+        <dependency org="lianlife" name="sf-ilog-axis" rev="1.0.0" /><!--add  -->
+        <dependency org="lianlife" name="stax2-api" rev="3.1.1" /><!--add  -->
+        <dependency org="lianlife" name="spring-aop" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-aspects" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-beans" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-build-src" rev="3.2.3.RELEASE"/>   
+        <dependency org="lianlife" name="spring-context" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-context-support" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-core" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-expression" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-instrument" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-instrument-tomcat" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-jdbc" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-jms" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-orm" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-oxm" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-struts" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-test" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-tx" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-web" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-webmvc" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="spring-webmvc-portlet" rev="3.2.3.RELEASE"/>
+        <dependency org="lianlife" name="servlet-api" rev="2.5"/>  
+        <dependency org="lianlife" name="slf4j-api" rev="1.6.4"/>
+        <dependency org="lianlife" name="slf4j-log4j12" rev="1.6.4"/>
+        <dependency org="lianlife" name="standard" rev="1.0.0"/>  
+        
+        <dependency org="lianlife" name="tiles-api" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-compat" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-core" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-el" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-extras" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-freemarker" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-jsp" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-mvel" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-ognl" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-portlet" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-portlet-wildcard" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-servlet" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-servlet-wildcard" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-template" rev="2.2.2"/>
+        <dependency org="lianlife" name="tiles-velocity" rev="2.2.2"/>   
+             
+        <!-- <dependency org="lianlife" name="v3x-login" rev="1.0.0"/> -->
+        <dependency org="lianlife" name="validation-api" rev="1.1.0.Final"/>
+        <dependency org="lianlife" name="velocity" rev="1.0.0"/>          
+        
+        <dependency org="lianlife" name="woodstox-core-asl" rev="1.0.0"/>
+        <dependency org="lianlife" name="wsdl4j" rev="1.6.2"/>
+        <dependency org="lianlife" name="wstx-asl" rev="3.2.4"/>
+        
+        <dependency org="lianlife" name="xml-resolver" rev="1.0.0"/>
+        <dependency org="lianlife" name="xmlschema" rev="1.4.2"/>
+        <dependency org="lianlife" name="xmlschema-core" rev="1.0.0"/>
+        <dependency org="lianlife" name="xmltooling" rev="1.0.0"/>
+        
+        <dependency org="lianlife" name="guava" rev="18.0"/>
+        <dependency org="lianlife" name="reflections" rev="1.0"/>
+        <dependency org="lianlife" name="lian-build" rev="1.0.0"/>        
+	</dependencies>
+</ivy-module> 

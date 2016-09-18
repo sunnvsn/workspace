@@ -1,0 +1,20 @@
+CACHE MANIFEST
+CACHE:
+index.34b6a99bebbe99c7ad45c2131749b927.cacheable.hmgz
+../common/js/jquery-1.9.1.js.jmgz?md5=08c235d357750c657ac1db7d1cf656a9
+../common/js/underscore.js.jmgz?md5=a09bb7689b7d5b1d33a0290a632bfb85
+../common/js/backbone.js.jmgz?md5=091c7edecef63eb674249698b685f0b0
+../common/js/jquery-1.9.1.min.js.jmgz?md5=397754ba49e9e0cf4e7c190da78dda05
+./../common/js/cfg.js.jmgz?md5=f2746f5b85471a6a1de1a4c113352305
+./../common/js/jquery-sso-patch_mobile.js.jmgz?md5=1763e93787d5605c7e364567833a77c9
+./../common/js/JsonStubMobile.js.jmgz?md5=e4aec230d23ad2c7b13a0681433621fd
+./../Stub/WXImgUploadJsBean.js.jmgz?md5=70265a97d0bd7b5ceb2b15c41f129a7c
+./../Stub/WeChatImgJsBean.js.jmgz?md5=a5303b1813143b2bd1bcec10939296ec
+css/normalize.css.cmgz?md5=07f5a55b742a3a0001045d2e9ea48dad
+css/frozen.css.cmgz?md5=70c61878d67b314c1a69d4e0710d247d
+js/zepto.min.js.jmgz?md5=0bf796c67c3a5cd443d165d1215ae94b
+js/frozen.js.jmgz?md5=c24b83af797e1eddc8aab66268ffdb40
+js/update.js.jmgz?md5=fbfc0bfb87fcd03a062cfeb630aabe01
+
+NETWORK:
+*

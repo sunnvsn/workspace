@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ES" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+	<!-- =================================================================== -->
+	<!-- 变量设置 -->
+	<!-- =================================================================== -->
+	<property environment="env" />
+	<property name="project.root" value="." />
+	<!-- 代码目录 -->
+	<property name="java" value="${project.root}/src/main/java" />
+	<property name="javatest" value="${project.root}/src/test" />
+	<property name="res" value="${project.root}/src/main/resource" />
+	<property name="web" value="${project.root}/src/main/webapp" />
+	<property name="webinf" value="${project.root}/src/main/webapp/WEB-INF" />
+	<property name="lib" value="${webinf}/lib" />
+	<property name="bin" value="${webinf}/classes" />
+	<property name="dist" value="${project.root}/dist" />
+	<property name="report" value="${project.root}/report" />
+	<property name="test-reports" value="${project.root}/test-reports" />
+	<property name="container" value="${container.home}" />
+	<property name="ivycache" value="${user.home}/.ivy2" />
+
+	<property file="build.properties" />
+
+	<target name="classes-clean" description="清空classes目录">
+		<delete dir="${bin}" />
+	</target>
+
+	<target name="lib-clean" description="清空jar及ivy缓存">
+		<delete dir="${lib}" />
+	</target>
+
+	<target name="clean" depends="classes-clean,lib-clean" description="清空所有构建文件">
+		<delete dir="${report}" />
+	</target>
+
+	<target name="configure-lib" depends="clean" unless="ivy-already-configured" description="设置第三方包配置文件">
+		<ivy:configure url="${ivysettings.url}" />
+		<ivy:cleancache />
+		<property name="ivy-already-configured" value="true"/>
+	</target>
+
+<!-- repo不稳定，暂不使用	<target name="get-lib" depends="configure-lib" description="下载或从本地缓存获取第三方包">
+		<ivy:resolve file="ivy.xml" conf="*" />
+		<ivy:retrieve pattern="${lib}/[artifact].[ext]" />
+	</target> -->
+
+	<path id="classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement path="${bin}" />
+	</path>
+	
+	<target name="compile" depends="classes-clean" description="Compile java source">
+		<copy todir="${bin}">
+			<fileset dir="${res}" includes="**" />
+		</copy>
+		
+		<java classname="com.lianlife.es.util.MainCommand" >
+			<arg value="/cfg.properties"/>
+			<classpath refid="classpath" />
+		</java>
+				
+		<javac srcdir="${java}" includes="**" excludes="**/applet/**"  encoding="utf-8" destdir="${bin}" source="1.6" target="1.6" 
+				includeantruntime="false"  nowarn="true" debug="true" debuglevel="lines,vars,source" >
+			<compilerarg line="-Xlint:unchecked" />
+			<classpath refid="classpath" />
+		</javac>  
+		
+		<copy todir="${bin}">
+			<fileset dir="${java}" includes="**" />
+		</copy>
+	</target>
+	
+	<target name="war" depends="compile">
+		<delete dir="${dist}" />
+		<mkdir dir="${dist}" />
+
+		<jar destfile="${dist}/${ant.project.name}.war">
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Specification-Version" value="${project.version}" />
+			</manifest>
+			<fileset dir="${web}">
+				<exclude name="**/jsp-api.jar" />
+				<exclude name="**/servlet-api-2.5.jar" />
+				<exclude name="**/cfg.properties" />
+			</fileset>
+		</jar>
+	</target>
+	
+	<!--UAT Pkg begin  -->
+	<target name="uat-compile" depends="classes-clean" description="Compile java source">
+		<copy todir="${bin}">
+			<fileset dir="${res}" includes="**" />
+		</copy>
+		
+		<java classname="com.lianlife.es.util.MainCommand" >
+			<arg value="/cfg.uat.properties"/>
+			<classpath refid="classpath" />
+		</java>
+				
+		<javac srcdir="${java}" includes="**" excludes="**/applet/**"  encoding="utf-8" destdir="${bin}" source="1.6" target="1.6" 
+				includeantruntime="false"  nowarn="true" debug="true" debuglevel="lines,vars,source" >
+			<compilerarg line="-Xlint:unchecked" />
+			<classpath refid="classpath" />
+		</javac>  
+		
+		<copy todir="${bin}">
+			<fileset dir="${java}" includes="**" />
+		</copy>
+	</target>	
+	
+	<target name="uat-war" depends="compile">
+		<delete dir="${dist}" />
+		<mkdir dir="${dist}" />
+		<jar destfile="${dist}/${ant.project.name}-uat.war">
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Specification-Version" value="${project.version}" />
+			</manifest>
+			<fileset dir="${web}">
+				<exclude name="**/jsp-api.jar" />
+				<exclude name="**/servlet-api-2.5.jar" />
+				<exclude name="**/*.properties" />
+			</fileset>
+		</jar>
+	</target>
+	<!--UAT Pkg end  -->
+	
+</project>

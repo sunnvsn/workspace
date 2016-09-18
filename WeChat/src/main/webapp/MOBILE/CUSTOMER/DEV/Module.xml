@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module MODULE_ID="M">
+	<Functions>
+		<Function FUNCTION_ID="common" NAME="common" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0">
+			<Dir>/common</Dir>
+		</Function>
+
+		<Function FUNCTION_ID="Stub" NAME="Stub" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0">
+			<Dir>/Stub</Dir>
+		</Function>
+
+		<!-- <Function FUNCTION_ID="Login" NAME="用户登录" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0" >
+		</Function> -->
+		
+		<!-- <Function FUNCTION_ID="Home" NAME="HOME" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0" >
+		</Function>
+		
+		<Function FUNCTION_ID="Binding" NAME="Binding" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0" >
+		</Function>
+		
+		<Function FUNCTION_ID="PictureUpload" NAME="PictureUpload" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0" >
+		</Function>
+
+		<Function FUNCTION_ID="Vote" NAME="Vote" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0" >
+		</Function>
+	
+		<Function FUNCTION_ID="LuckyDraw" NAME="LuckyDraw" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0" >
+		</Function> -->
+
+		<Function FUNCTION_ID="WXIMG" NAME="WXIMG" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0" >
+		</Function>		
+<!-- 		<Function FUNCTION_ID="PolicyBinding" NAME="PolicyBinding" R="true" V="false"
+			INSTALL_TYPE="system" VERSION="1.0" >
+		</Function> -->
+		
+		<!-- <Function FUNCTION_ID="PersonalPolicyQuery" NAME="个人保单" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/PersonalPolicyQuery/resources/icons/icon_PersonalPolicyQuery_normal.png" >
+		</Function>
+
+       <Function FUNCTION_ID="GroupPolicy" NAME="团体保单" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/GroupPolicy/resource/icons/group_policy.png" >
+		</Function>
+		
+       <Function FUNCTION_ID="SurvivalQuery" NAME="生存金" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/SurvivalQuery/resources/icons/icon_scbaoxianjin_normal.png" >
+		</Function> -->
+		
+		<!-- 
+		<Function FUNCTION_ID="ForService" NAME="服务人员信息查询" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0">
+		</Function>
+		-->
+		
+		<!-- <Function FUNCTION_ID="BonusQuery" NAME="我的红利" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/Home/resources/icons/icon_honglixinxicha_normal.png" >
+		</Function>
+		
+		<Function FUNCTION_ID="UniAccount" NAME="万能账户" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/Home/resources/icons/icon_wannengzhanghuxinxicha_normal.png" >
+		</Function>
+		
+		<Function FUNCTION_ID="BindingPolicy" NAME="加挂保单" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/Home/resources/icons/icon_guashijijiechu_normal.png" >
+		</Function>
+		
+		<Function FUNCTION_ID="FreePolicyEffect" NAME="赠险激活" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/Home/resources/icons/icon_free_effect.png" >
+		</Function>
+		
+		<Function FUNCTION_ID="FreeQuery" NAME="赠险查询" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/Home/resources/icons/icon_free_search.png" >
+		</Function>
+		
+		<Function FUNCTION_ID="FreePolicy" NAME="领取赠险" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/Home/resources/icons/icon_yewubanli_normal.png" >
+		</Function>
+		
+		<Function FUNCTION_ID="ClmQry" NAME="理赔查询" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/Home/resources/icons/icon_lipeixinxicha_normal.png" >
+		</Function>
+		
+		<Function FUNCTION_ID="InsureProgress" NAME="投保进度" R="false"
+			V="true" INSTALL_TYPE="system" VERSION="1.0"
+			ICON="/Home/resources/icons/icon_toubaojindu.png" >
+		</Function> -->
+	</Functions>
+</Module>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module  MODULE_ID="M"  MD5="1615e6346e4ec68f0d9e5934e7c34886" >
+  <Functions>
+		<Function FUNCTION_ID="Stub" NAME="Stub" R="true" V="false" INSTALL_TYPE="system" VERSION="1.0" ICON="null" ICON_MD5="null" INDEX="/Stub/index.html" MD5="5c755aab05af36263193dd95ee05ed7d">
+           <Files>
+             <File PATH="/Stub/WXImgUploadJsBean.js" MD5="70265a97d0bd7b5ceb2b15c41f129a7c"/>
+             <File PATH="/Stub/WeChatImgJsBean.js" MD5="a5303b1813143b2bd1bcec10939296ec"/>
+             <File PATH="/Stub/_CookieBean.js" MD5="7483e2dbb9169558ff43a91d65fdd904"/>
+           </Files>
+		</Function>		<Function FUNCTION_ID="WXIMG" NAME="WXIMG" R="true" V="false" INSTALL_TYPE="system" VERSION="1.0" ICON="null" ICON_MD5="null" INDEX="/WXIMG/index.html" MD5="89515b143fffcae58e825c178b6d7487">
+           <Files>
+             <File PATH="/WXIMG/css/frozen.css" MD5="70c61878d67b314c1a69d4e0710d247d"/>
+             <File PATH="/WXIMG/css/lars.wx.css" MD5="da45f65fd49d8e3f9cfbc5d1d9a8e727"/>
+             <File PATH="/WXIMG/css/normalize.css" MD5="07f5a55b742a3a0001045d2e9ea48dad"/>
+             <File PATH="/WXIMG/img/a.jpg" MD5="5a1cd499e4b29cdf02dd93ff6c0a0e6f"/>
+             <File PATH="/WXIMG/img/b.jpg" MD5="9304044778e6134310f532cb8a29c9ac"/>
+             <File PATH="/WXIMG/img/c.jpg" MD5="9f9f644ec9adce4e5b543f63887a6e42"/>
+             <File PATH="/WXIMG/img/d.jpg" MD5="b394001efe7b03f073e142c61abc1689"/>
+             <File PATH="/WXIMG/img/e.jpg" MD5="9582984c91587a94055aeee19447959c"/>
+             <File PATH="/WXIMG/img/icon-chaozzn.png" MD5="248e6c5ce73eef5fb0aa42ea0fcf8790"/>
+             <File PATH="/WXIMG/img/icon_add.png" MD5="b47b1de98f6dfd99d22795aa790732c8"/>
+             <File PATH="/WXIMG/img/icon_entrance.png" MD5="6d13afd3402477336cfbfa8038986f97"/>
+             <File PATH="/WXIMG/img/icon_entrance_2.png" MD5="92c38d1b5804bc84c928024032cc7912"/>
+             <File PATH="/WXIMG/img/loading.gif" MD5="9f5063da9f5d2a404de7872160db22d4"/>
+             <File PATH="/WXIMG/img/pic_500x375.jpg" MD5="51995dfb77d4729b1668a64056fc0c2e"/>
+             <File PATH="/WXIMG/img/sprite.png" MD5="83da6ae33100b8ec462ac7e2786a9b08"/>
+             <File PATH="/WXIMG/index.html" MD5="40e8f973b41959ea08568ca2a69e55aa"/>
+             <File PATH="/WXIMG/index_yantai.html" MD5="ce4356febec48066d2f96b4acb2807d3"/>
+             <File PATH="/WXIMG/js/date.js" MD5="a8c20ae701e8ce325552f89a74594142"/>
+             <File PATH="/WXIMG/js/frozen.js" MD5="c24b83af797e1eddc8aab66268ffdb40"/>
+             <File PATH="/WXIMG/js/update.js" MD5="fbfc0bfb87fcd03a062cfeb630aabe01"/>
+             <File PATH="/WXIMG/js/zepto.min.js" MD5="0bf796c67c3a5cd443d165d1215ae94b"/>
+             <File PATH="/WXIMG/jump.html" MD5="77fa874d494f4e6a079215087ca4cc99"/>
+             <File PATH="/WXIMG/jump_yantai.html" MD5="a3e9e4b371ffa3ca7ffaf75aaee4bfc7"/>
+             <File PATH="/WXIMG/result_success.html" MD5="d0ddb0f3bde43291495934b2b9c9b08d"/>
+             <File PATH="/WXIMG/result_success_yantai.html" MD5="b4c93756e1442bf619112a35f6152917"/>
+           </Files>
+		</Function>		<Function FUNCTION_ID="common" NAME="common" R="true" V="false" INSTALL_TYPE="system" VERSION="1.0" ICON="null" ICON_MD5="null" INDEX="/common/index.html" MD5="494f089d0e902ab564f5514cf15144d8">
+           <Files>
+             <File PATH="/common/back.png" MD5="9d59e464b66e9c57407c3a4eceaec4be"/>
+             <File PATH="/common/banner.png" MD5="44dc5f0037861dd8926901aa16a6209a"/>
+             <File PATH="/common/banner1.png" MD5="ab97208881f81cf74ddc5adacf1d6f95"/>
+             <File PATH="/common/banner2.png" MD5="9218e4d6b0a22b8208f71aadb6df180a"/>
+             <File PATH="/common/btn_login.png" MD5="3372cd321be81aee00f767b0897b515d"/>
+             <File PATH="/common/css/bootstrap-theme.css" MD5="521843d19184fbfca0b13f66bffdedcc"/>
+             <File PATH="/common/css/bootstrap-theme.min.css" MD5="2eba6afef4ec3eff6ff250d16880f4c0"/>
+             <File PATH="/common/css/bootstrap.css" MD5="b9ab1d050bb48d300d478070986f71c0"/>
+             <File PATH="/common/css/bootstrap.min.css" MD5="35fc838ce584c1eb81b3bebe245442d6"/>
+             <File PATH="/common/css/custom.css" MD5="a1f69284d11952eddeb5e34b3e2a6d75"/>
+             <File PATH="/common/css/docs.css" MD5="cb9b6ec266f63dd5ac6de7ee2a8d2102"/>
+             <File PATH="/common/css/images/ajax-loader.gif" MD5="8fd7e719b06cd3f701c791adb62bd7a6"/>
+             <File PATH="/common/css/jquery.mobile-1.4.2.min.css" MD5="ae9f48bc8c3c47a39c20a9a68e988e77"/>
+             <File PATH="/common/css/jquery.mobile.simpledialog.min.css" MD5="750b8e1109d7e2f2c115cae2605caa01"/>
+             <File PATH="/common/css/jquery.mobile.theme-1.4.2.css" MD5="ee48846e4811cd101db085a733dd1ec6"/>
+             <File PATH="/common/css/sencha-touch.css" MD5="da8e83c99b226f35e4225a23d6ba46d0"/>
+             <File PATH="/common/dot_normal.png" MD5="844843c1a12d202423157c4bf0a1c91e"/>
+             <File PATH="/common/dot_select.png" MD5="6d98275365c87cc1da56a23cc23abe0f"/>
+             <File PATH="/common/fonts/glyphicons-halflings-regular.eot" MD5="aa16cd35628e6dddf56e766c9aa4ae63"/>
+             <File PATH="/common/fonts/glyphicons-halflings-regular.svg" MD5="0a5c48c69a25a93e37ed62db813387fa"/>
+             <File PATH="/common/fonts/glyphicons-halflings-regular.ttf" MD5="47da44498fc073d9fff9ab0cdb0bef8e"/>
+             <File PATH="/common/fonts/glyphicons-halflings-regular.woff" MD5="5eae1f7217b606d3580dd70ac840fea1"/>
+             <File PATH="/common/home.png" MD5="324c72506a9466cd666373e86e63b919"/>
+             <File PATH="/common/icon_add_normal.png" MD5="1fd0d6105d6d2d5252beb0dfb79bd6c3"/>
+             <File PATH="/common/icon_exit.png" MD5="0e043a56dca3379c6db321df27decb8d"/>
+             <File PATH="/common/icon_ext_child.png" MD5="52f2558aea40c4f5131ef098f1953692"/>
+             <File PATH="/common/icon_ext_group_expand.png" MD5="d008913ee125393dcdefc77be1aeb833"/>
+             <File PATH="/common/icon_ext_group_shrink.png" MD5="f6680913a397a467165e0aaf83554fe4"/>
+             <File PATH="/common/icon_ext_login.png" MD5="8e3dac999af48475dd94af9a165fd3b0"/>
+             <File PATH="/common/icon_ext_quit.png" MD5="9e6901a8ac9a1c3d7b91463545a4db56"/>
+             <File PATH="/common/icon_home_focus.png" MD5="6d8a65de8d88cd74d5cfe5f1a39f6154"/>
+             <File PATH="/common/icon_home_normal.png" MD5="92c04a7ddf5d458c4387c3ea30cb37a1"/>
+             <File PATH="/common/icon_mall_focus.png" MD5="27bd90099be2e7c00ac45a5297e5417d"/>
+             <File PATH="/common/icon_mall_normal.png" MD5="c1e0e7d2432825bd09849bc85cafeec3"/>
+             <File PATH="/common/icon_menu.png" MD5="5e5a903e7342a9cc2a4416ddb46d8843"/>
+             <File PATH="/common/icon_more_focus.png" MD5="5a93167cdc11167cd962323acf04ed3d"/>
+             <File PATH="/common/icon_more_normal.png" MD5="5f0af7280e30c9ca73f685c4714689d6"/>
+             <File PATH="/common/icon_myorder_focus.png" MD5="55d71498914b17afcbb3c6635a3bbc0b"/>
+             <File PATH="/common/icon_myorder_normal.png" MD5="759de000607241cc1e7ac77e56cb3d32"/>
+             <File PATH="/common/icon_policy_focus.png" MD5="4e8560720ed58f068c7cf895afbfb73a"/>
+             <File PATH="/common/icon_policy_normal.png" MD5="32dde882fd05b6150a0e066cb75e975d"/>
+             <File PATH="/common/icon_return.png" MD5="51a75c761478d029884d6fe356dec744"/>
+             <File PATH="/common/icon_submit.png" MD5="0f9b1f49b663421e928a0e39d288ac3c"/>
+             <File PATH="/common/images/QQ.png" MD5="63d6ee86b561ab5d0a35dfe537f26823"/>
+             <File PATH="/common/images/bg.png" MD5="3de296a7c55f43b992b17fb02379238c"/>
+             <File PATH="/common/images/bg2.png" MD5="3de296a7c55f43b992b17fb02379238c"/>
+             <File PATH="/common/images/grey_dot.png" MD5="dc5752943d54602e621af28531728da2"/>
+             <File PATH="/common/images/grey_dot_line2.png" MD5="10d0e94b784e8e9b14f2739d721c3470"/>
+             <File PATH="/common/images/load.gif" MD5="50c5e3e79b276c92df6cc52caeb464f0"/>
+             <File PATH="/common/images/logo.png" MD5="c0424e3b43186c4d9eb6b498c26eee21"/>
+             <File PATH="/common/images/red_dot.png" MD5="c36fd76ce6df8a2565b96bffba43359e"/>
+             <File PATH="/common/images/red_dot_line2.png" MD5="2025b8fdc117525e4e4981daeb2cfb56"/>
+             <File PATH="/common/images/zfb.png" MD5="e847f16ab5c5f31e608ede9f4c82086c"/>
+             <File PATH="/common/js/JsonStubMobile.js" MD5="e4aec230d23ad2c7b13a0681433621fd"/>
+             <File PATH="/common/js/Login.js" MD5="02b6f1c3e4e3c51c29ba2886c50b4da0"/>
+             <File PATH="/common/js/SessionRequired.js" MD5="b602829356f4341049055f8875ab2b63"/>
+             <File PATH="/common/js/backbone.js" MD5="091c7edecef63eb674249698b685f0b0"/>
+             <File PATH="/common/js/bootstrap.js" MD5="cf1cf2fce27179c0de8a71c73b378f07"/>
+             <File PATH="/common/js/bootstrap.min.js" MD5="353240ad37d1b084a53b1575f8ce57da"/>
+             <File PATH="/common/js/callActivity.js" MD5="f22c7d3ac46f82563a2226f7314b5cb8"/>
+             <File PATH="/common/js/cfg.js" MD5="f2746f5b85471a6a1de1a4c113352305"/>
+             <File PATH="/common/js/jquery-1.9.1.js" MD5="08c235d357750c657ac1db7d1cf656a9"/>
+             <File PATH="/common/js/jquery-1.9.1.min.js" MD5="397754ba49e9e0cf4e7c190da78dda05"/>
+             <File PATH="/common/js/jquery-sso-patch_mobile.js" MD5="1763e93787d5605c7e364567833a77c9"/>
+             <File PATH="/common/js/jquery.mobile-1.4.2.min.js" MD5="a55c76dcd1286c4bd7508a2766202d2c"/>
+             <File PATH="/common/js/policyTemplate.js" MD5="293e57ec263f80a6e04aa6e4b7498c62"/>
+             <File PATH="/common/js/sencha-touch-all.js" MD5="29a7e236f79be954d120ca83054d2291"/>
+             <File PATH="/common/js/stickUp.min.js" MD5="2a407130f9ed2b66cdd21407c203c149"/>
+             <File PATH="/common/js/topBar.js" MD5="15fcaf1944c397c88098d5f73dfc34b6"/>
+             <File PATH="/common/js/underscore.js" MD5="a09bb7689b7d5b1d33a0290a632bfb85"/>
+             <File PATH="/common/lct-m.png" MD5="2efd1ed3498d887cff82043063e11e73"/>
+             <File PATH="/common/load.gif" MD5="50c5e3e79b276c92df6cc52caeb464f0"/>
+             <File PATH="/common/logo.png" MD5="aff7799e7104b9ee4bcc9ce942a11e61"/>
+             <File PATH="/common/messbg.jpg" MD5="2ea47711337d540de338e8ab1073c8da"/>
+             <File PATH="/common/messbg2.jpg" MD5="08d21217d920c4ff16d4ec5a683ae41c"/>
+             <File PATH="/common/nicevalidate/images/loading.gif" MD5="c71e992a25c2b8ceb78576a9826c81f2"/>
+             <File PATH="/common/nicevalidate/images/validator_default.png" MD5="6cd5643f626ee39ef27820fcb986a2af"/>
+             <File PATH="/common/nicevalidate/images/validator_simple.png" MD5="c372d39cfc469b4d4e7bda3a07e75bd7"/>
+             <File PATH="/common/nicevalidate/jquery.validator.css" MD5="848d456d55244236b5b9043ad8ee4205"/>
+             <File PATH="/common/nicevalidate/jquery.validator.js" MD5="c968f2fb10a4387db413ffc5f275398e"/>
+             <File PATH="/common/nicevalidate/zh_CN.js" MD5="ed8d34346a2d5877329f01a3c6f45b22"/>
+             <File PATH="/common/retpage/fail.html" MD5="b33cad3c0d5c150b98413d2bf54e0de0"/>
+             <File PATH="/common/retpage/success.html" MD5="c5419f7dcf8befb3841a202ce425d8e9"/>
+             <File PATH="/common/toplogo.png" MD5="7fc1b55368fa80ac77ae50d20d963c63"/>
+             <File PATH="/common/welcome_bg.png" MD5="fd0e34275518420c395605112333e58c"/>
+           </Files>
+		</Function>  </Functions>
+</Module>

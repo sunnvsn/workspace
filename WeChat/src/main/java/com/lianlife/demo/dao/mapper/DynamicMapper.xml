@@ -1,0 +1,19 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lianlife.demo.dao.DynamicDao">
+
+	<insert id="addDynamic" parameterType="com.lianlife.demo.model.DynamicDomain">
+		INSERT INTO t_message (F_MESSAGE_ID, F_USER_ID,F_CONTENT, F_CREATE_DATE) VALUES (#{messageId},#{userId},#{messageContent},now())
+	</insert>
+	
+	<select id="getDynamicList" resultType="com.lianlife.demo.model.DynamicDomain">  
+	    SELECT U.F_USER_NAME userName,
+	       U.F_USER_IMAGE userImage, 
+	       M.F_MESSAGE_ID messageId, 
+	       M.F_CONTENT messageContent
+	       FROM demo.t_user U , demo.t_message M where U.F_USER_ID = M.F_USER_ID order by M.F_CREATE_DATE DESC 
+  	</select> 
+
+</mapper>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html id="html">
+<head lang="en">
+	<meta charset="UTF-8"/>  
+    <meta NO_SESSION='Y'/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <title>填写资料</title>
+     <script language="javascript" src="../common/js/jquery-1.9.1.js.jmgz?md5=08c235d357750c657ac1db7d1cf656a9"></script>
+    <script language="javascript" src="../common/js/underscore.js.jmgz?md5=a09bb7689b7d5b1d33a0290a632bfb85"></script>
+	<script language="javascript" src="../common/js/backbone.js.jmgz?md5=091c7edecef63eb674249698b685f0b0"></script>  
+    <script language="javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="../common/js/jquery-1.9.1.min.js.jmgz?md5=397754ba49e9e0cf4e7c190da78dda05"></script>
+    <script type="text/javascript" charset="utf-8" src="./../common/js/cfg.js.jmgz?md5=f2746f5b85471a6a1de1a4c113352305"></script>
+    <script type="text/javascript" charset="utf-8" src="./../common/js/jquery-sso-patch_mobile.js.jmgz?md5=1763e93787d5605c7e364567833a77c9"></script>
+    <script type="text/javascript" charset="utf-8" src="./../common/js/JsonStubMobile.js.jmgz?md5=e4aec230d23ad2c7b13a0681433621fd"></script>
+    <script type="text/javascript" src="./../Stub/WXImgUploadJsBean.js.jmgz?md5=70265a97d0bd7b5ceb2b15c41f129a7c"></script>
+    
+    <script type="text/javascript" src="./../Stub/WeChatImgJsBean.js.jmgz?md5=a5303b1813143b2bd1bcec10939296ec"></script>
+    
+    <script type="text/javascript">
+        (function(){
+            var device = window.innerWidth,scale = device / 640,meta = document.getElementById("viewport");
+            meta.setAttribute("content","initial-scale=" + scale + ", width=device-width, maximum-scale=1, user-scalable=no");
+            document.addEventListener("touchend",function(){return false})
+        })();
+        
+ var currenUrl=location.href.split('#')[0];
+        
+        $(document).ready(function(){
+        
+        	RpcContext.getBean('WXImgUploadJsBean').getWXConfigData(encodeURI(currenUrl),{
+        		onSucess:function(result)
+        		{
+        			
+        			if(result.signature){
+            			try{
+            				wx.config({
+            					debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            					appId: result.appId, // 必填，公众号的唯一标识
+            					timestamp: result.timestamp, // 必填，生成签名的时间戳
+            					nonceStr: result.nonceStr, // 必填，生成签名的随机串
+            					signature: result.signature,// 必填，签名
+            					jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','hideOptionMenu','showOptionMenu','hideMenuItems','closeWindow','chooseWXPay', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage']  // 必填，需要使用的JS接口列表
+            				});
+            				
+            				
+            			}catch(e){
+            				
+            				alert(e);
+            			}			
+            		}else
+            		{
+            			sessionStorage.setItem("_retMsg","系统错误！");
+    					window.location.replace("./../common/retpage/fail.html?random="+Math.random());
+            		}
+        		},
+        		onError:function(err)
+		        {
+		        	sessionStorage.setItem("_retMsg","系统错误！");
+					window.location.replace("./../common/retpage/fail.html?random="+Math.random());
+		        }
+        	});
+       });
+        
+        function uploadImage(claimId,parentDiv,imageType,i,localIds)
+        {
+        	 wx.uploadImage({
+	    		  
+		            localId: localIds[i], // 需要上传的图片的本地ID，由chooseImage接口获得
+		            isShowProgressTips: 1, // 默认为1，显示进度提示
+		            success: function (res) {
+		            	
+		                var serverId = res.serverId; // 返回图片的服务器端ID
+		                
+		               
+		                
+		                var paramterList=[];
+		                paramterList[0]={
+		                		serverId:serverId,
+		                		attributes:{
+		                			claimId:claimId //微信理赔申请号
+		                		}
+		                };
+		                
+		                RpcContext.getBean('WXImgUploadJsBean').uploadClaimImages(paramterList,{
+			                
+		                	onSucess:function(rt){
+		                	
+		                	     $(parentDiv+"_ADD").before("<li><img class='"+imageType+"'   serverId='"+serverId+"' src='"+rt[0].url+"'  onclick=\"previewImage('"+rt[0].url+"','"+parentDiv+"')\"/> <i class=\"delete\"></i></li>");
+		                		
+		                		 if(i==(localIds.length-1))
+		                		 { 
+		                			
+		                			 
+		                		 }else
+		                		 {
+		                			
+		                			
+		                			 uploadImage(claimId,parentDiv,imageType,i+1,localIds)
+		                		 }
+		                		 
+		                	
+		                	},
+		                	onError:function(err){
+		                		alert("EEE");
+		                		alert(err);
+		                	}
+		                	
+		                });
+		                
+		                
+		                
+		                
+		            }
+		        });
+        }
+        
+        function chooseImage(claimId,parentDiv,imageType){
+        	
+        	wx.chooseImage({
+			    count: 9, // 默认9
+			    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+			    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+			    success: function (res) {
+			    	var localIds =[];
+			        localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+
+			        uploadImage("ClaimId",parentDiv,imageType,0,localIds)
+			          
+			        
+			    }
+			});
+        }
+			
+			
+        function previewImage(param,parentDiv){
+        	
+        	var size = $(parentDiv).children("li").size();
+        	var UrlArray = [];
+        
+        	for(var beg = 0;beg < size-1;beg++){
+        		
+        		UrlArray[beg]  =	$(parentDiv).children("li:eq(" + beg + ")").children("img").attr("src");
+        	}
+        	wx.previewImage({
+ 			    current: param ,// 当前显示图片的http链接
+ 			   	urls: UrlArray
+ 			});
+        	
+       	
+        }
+			 
+		function commit(){
+						
+			$("#commit").attr('disabled',true);
+			var imageList = new Array();
+			//身份证图像
+			var IDImageSize = $("#IDImage").children("li").size();
+			
+        	var IDImageArray = [];
+        	
+	        if(IDImageSize==1){
+	        	imageList[0]=IDImageArray;
+	        }else{
+	        	
+				for(var beg = 0;beg < IDImageSize-1;beg++){
+					var IDImageData = new Object();
+					IDImageData.serverId = $("#IDImage").children("li:eq(" + beg + ")").children("img").attr("serverId");
+					IDImageData.applySubtype = "010015";
+					IDImageData.imageType ="01";
+					IDImageArray.push(IDImageData);
+				
+	        	}
+				imageList[0]=IDImageArray;
+			
+				
+	        }
+        	
+	        var Name= "test"
+	        var PolicyNoFirst= $("#PolicyNoFirst").val();
+	        var PolicyNo= $("#PolicyNoSecond").val();
+	        
+	        
+	        var reg = new RegExp("^[0-9]*$");
+	       
+	        if(PolicyNoFirst==null||PolicyNoFirst==''){
+	        	alert("请填写投保单号");	
+	        	$("#commit").attr('disabled',false);
+	        	return;
+	        }else if(!reg.test(PolicyNoFirst) || PolicyNoFirst.length < 16){
+	        	alert("请正确填写投保单号");	
+	        	$("#commit").attr('disabled',false);
+	        	return;
+	        }
+	        
+	        if(PolicyNo==null||PolicyNo==''){
+	        	alert("请再次填写投保单号");	
+	        	$("#commit").attr('disabled',false);
+	        	return;
+	        }
+	        
+	        if(PolicyNoFirst!=PolicyNo){
+	        	alert("两次投保单号不一致，请重新填写");	
+	        	$("#commit").attr('disabled',false);
+	        	return;
+	        }
+	        
+	        if(IDImageSize==1){
+	        	alert("请上图像");	
+	        	$("#commit").attr('disabled',false);
+	        	return;
+	        }
+	       
+	        RpcContext.getBean('WeChatImgJsBean').CommitData(imageList,Name,PolicyNo,"86320500",{
+                
+            	onSucess:function(rt){
+            		
+            		 window.location.replace("./result_success.html");
+            	},
+            	onError:function(err){
+            		$("#commit").attr('disabled',false);
+            		alert("提交失败，请重新提交。");
+            	}
+            	
+            });
+	
+		}
+        
+        
+        
+        
+    </script>
+    <!-- 库css -->
+    <link rel="stylesheet" href="css/normalize.css.cmgz?md5=07f5a55b742a3a0001045d2e9ea48dad" />
+    <link rel="stylesheet" href="css/frozen.css.cmgz?md5=70c61878d67b314c1a69d4e0710d247d" />
+    <!-- 1f5私有样式 -->
+    <link rel="stylesheet" href="css/lars.wx.css?v=1.0" />
+    
+</head>
+<body>
+ <!-- 页面主体 -->
+    <div class="pageMain pb100">
+     	<div class="formBox">
+            <ul>
+                <!-- <li>
+                    <input type="text" id="insurdName" placeholder="请输入姓名" />
+                </li>
+                <li>
+                    <div id="clientNameMsg" class="errcheck"></div>
+                </li>    -->      
+                <li>
+                    <input type="text" id="PolicyNoFirst"  placeholder="请输入投保单号" />
+                </li>
+                <li>
+                    <div id="clientPhoneMsg" class="errcheck"></div>
+                </li>
+                <li>
+                    <input type="text" id="PolicyNoSecond"  placeholder="请再次输入投保单号" />
+                </li>
+                <li>
+                    <div id="clientPhoneMsg" class="errcheck"></div>
+                </li>
+                <li id="errortips">
+                   
+                </li>
+            </ul>
+        </div>
+    
+        <div class="formBox">
+            <ul>
+                <li>
+                    <div class="formCard">
+                        <dl>
+                            <dt>
+                                <span>请上传图片 <em>*</em></span>
+                                <div class="space"></div>
+                                <span class="edit">编辑</span>
+                            </dt>
+                            <dd>
+                                <ul class="updateList" id="IDImage" >
+                                    <li  class="btnUpdate" id="IDImage_ADD" onclick="chooseImage('ClaimId','#IDImage','01');"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>              
+                </li>
+            </ul>
+        </div>
+        <!-- 提交工具栏 -->
+        <div class="submitBar">
+            <button type="submit" class="ui-btn-b ui-btn-green" id="commit" onclick="commit();">提交</button>
+        </div>
+       
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js.jmgz?md5=0bf796c67c3a5cd443d165d1215ae94b"></script>
+    <script type="text/javascript" src="js/frozen.js.jmgz?md5=c24b83af797e1eddc8aab66268ffdb40"></script>
+    <script type="text/javascript" src="js/update.js.jmgz?md5=fbfc0bfb87fcd03a062cfeb630aabe01"></script>
+    
+ </body>
+</html>
